@@ -14,11 +14,7 @@ const Table = ({ sat }) => {
       <tbody>
         {sat.map((data) => {
           let status;
-          if (data.operational) {
-            status = 'Active';
-          } else {
-            status = 'Inactive';
-          }
+          data.operational ? status = 'Active': status = 'Inactive';
           return (
             <tr key={data.id}>
               <td>{data.name}</td>
